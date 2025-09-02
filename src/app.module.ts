@@ -1,8 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './database/database.module';
-import { BcryptService } from './providers/bcrypt.service';
-import { HashingService } from './providers/hashing.service';
 import config from './config';
 
 @Module({
@@ -13,6 +11,5 @@ import config from './config';
     }),
     DatabaseModule,
   ],
-  providers: [BcryptService, HashingService],
 })
 export class AppModule {}
